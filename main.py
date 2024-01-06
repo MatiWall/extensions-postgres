@@ -1,4 +1,4 @@
-from extensions_postgres import get_connection, set_global_config, get_cursor, read_sql
+from extensions import get_connection, set_global_config, get_cursor, read_sql
 
 set_global_config(**{
     'host': 'postgres.mw',
