@@ -8,6 +8,16 @@ packages = [
     {include='extensions/postgres'}
 ]
 
+[[tool.poetry.source]]
+name = "private"
+url = "http://pypi.mw.local"
+priority = "primary"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "supplemental"
+
 [tool.poetry.dependencies]
 python = "^3.11"
 pandas = "^2.1.4"
