@@ -10,10 +10,10 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.11"
-psycopg2 = "^2.9.9"
 pandas = "^2.1.4"
 types-psycopg2 = "^2.9.21.20250718"
 pandas-stubs = "^2.3.0.250703"
+psycopg2-binary = "^2.9.10"
 
 
 [tool.poetry.group.dev.dependencies]
