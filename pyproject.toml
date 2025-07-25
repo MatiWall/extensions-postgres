@@ -4,18 +4,26 @@ version = "0.1.0"
 description = ""
 authors = ["Matias Wallenius <MatiWall@live.dk>"]
 readme = "README.md"
-
-# Add your private repository
-[[tool.poetry.source]]
-name = "your-private-repo"
-url = "http://pypi.mw/simple"
+packages = [
+    {include='extensions/postgres'}
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 psycopg2 = "^2.9.9"
 pandas = "^2.1.4"
+types-psycopg2 = "^2.9.21.20250718"
+pandas-stubs = "^2.3.0.250703"
 
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.17.0"
+pytest = "^8.4.1"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.mypy]
+explicit_package_bases = true

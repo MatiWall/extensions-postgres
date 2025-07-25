@@ -1,5 +1,6 @@
 import functools
 from contextlib import contextmanager
+from typing import Optional
 import psycopg2
 import pandas as pd
 
@@ -55,10 +56,10 @@ def get_cursor(
 
 
 @apply_config
-def read_sql(sql: str, **kwargs):
+def read_sql(sql: str, params: Optional[tuple] = None, **kwargs):
     with get_cursor(**kwargs) as cursor:
         # Example: Execute a query and return a DataFrame
-        cursor.execute(sql)
+        cursor.execute(sql, params)
         result = cursor.fetchall()
         # Convert result to Pandas DataFrame
     columns = [desc[0] for desc in cursor.description]

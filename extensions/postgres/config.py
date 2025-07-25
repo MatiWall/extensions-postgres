@@ -6,13 +6,15 @@ HOST = 'postgres.mw'
 USER = 'postgres'
 PASSWORD = 'postgres'
 
+DATABASE = 'default'
 REQUIRED_ARGS = ['host', 'port', 'database', 'user', 'password']
 
 _DEFAULT_CONFIG = {
     'host': HOST,
     'port': PORT,  # Usually 5432 for PostgreSQL
     'user': USER,
-    'password': PASSWORD
+    'password': PASSWORD,
+    'database': DATABASE
 }
 
 _SYSTEM_VARIABLES = {
